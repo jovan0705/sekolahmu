@@ -10,13 +10,16 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      Class.hasMany(models.Seat, {as: 'available_seats', foreignKey: 'classId'})
+      Class.hasMany(models.Seat, {as: 'occupied_seats', foreignKey: 'classId'})
+      // Class.hasMany(models.Seat, {foreignKey: 'classId'})
       // define association here
     }
   }
   Class.init({
     rows: DataTypes.INTEGER,
     columns: DataTypes.INTEGER,
-    teacherId: DataTypes.STRING
+    teacherId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Class',

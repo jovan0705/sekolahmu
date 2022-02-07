@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       teacherId: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
