@@ -1,4 +1,9 @@
-# sekolahmu
+# SEKOLAHMU BACK-END TEST
+## How to Run:
+```
+1. npm install
+2. npm start
+```
 
 ## 1. API LOGIN & REGISTER
 ### LOGIN - [POST] - http://localhost:3000/user/login
