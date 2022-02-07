@@ -15,6 +15,11 @@ const errorHandler = (err, req, res, next) => {
             res.status(400).json({message: "Role is Invalid"})
             break;
         }
+
+        case 'CLASS_DOES_NOT_EXIST': {
+            res.status(400).json({message: "Class does not exist"})
+            break;
+        }
         
         case 'unauthorized': {
             res.status(401).json({message: 'invalid email/password'})

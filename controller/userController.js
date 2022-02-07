@@ -30,6 +30,7 @@ class userController {
     
             let payload = {
                 id: loginUser.id,
+                name: loginUser.name,
                 email: loginUser.email,
                 role: loginUser.role
             }
