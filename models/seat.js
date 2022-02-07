@@ -14,7 +14,15 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Seat.init({
-    classId: DataTypes.INTEGER,
+    classId: {
+      type: DataTypes.INTEGER,
+      unique: {msg: 'Class already registered'},
+      allowNull: false,
+      validate: {
+        notEmpty: {msg: 'Class cannot be empty'},
+        notNull: {msg: 'Class cannot be empty'}
+      }
+    },
     seats: DataTypes.STRING,
     studentId: DataTypes.INTEGER
   }, {

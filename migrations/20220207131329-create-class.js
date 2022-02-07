@@ -14,7 +14,7 @@ module.exports = {
       columns: {
         type: Sequelize.INTEGER
       },
-      teacher: {
+      teacherId: {
         type: Sequelize.STRING
       },
       createdAt: {
