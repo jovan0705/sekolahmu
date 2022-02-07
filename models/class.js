@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   Class.init({
     rows: DataTypes.INTEGER,
     columns: DataTypes.INTEGER,
-    teacher: DataTypes.STRING
+    teacherId: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Class',
